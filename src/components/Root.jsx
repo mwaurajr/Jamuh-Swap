@@ -16,6 +16,12 @@ const Root = () => {
         <div></div>
       </div>
       </div>
+
+      {/* <div className="home-text">
+
+        <h1>Welcome To BookSwap</h1>
+        <p></p>
+      </div> */}
     </div>
   );
 };
