@@ -5,9 +5,13 @@ import bgvideo from "../assets/video.mp4";
 const Root = () => {
   return (
     <div className="root">
-      
-      <video src={bgvideo} autoPlay muted loop class='bg-video'/>
       <div className="bg-overlay"></div>
+      <video src={bgvideo} autoPlay muted loop class='bg-video'/>
+      
+      <div className="content">
+            <h1>Welcome</h1>
+            <p>To my site.</p>
+        </div>
 
       <div className="navbar"> 
       <div className="menu">
@@ -17,11 +21,7 @@ const Root = () => {
       </div>
       </div>
 
-      {/* <div className="home-text">
-
-        <h1>Welcome To BookSwap</h1>
-        <p></p>
-      </div> */}
+    
     </div>
   );
 };
