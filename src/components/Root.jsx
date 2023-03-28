@@ -9,6 +9,10 @@ const Root = () => {
     alert("Clicked Explore btn")
   }
 
+  const handleMenu = () =>{
+    alert("Clicked Menu SideBar")
+  }
+
   return (
         <div className="landingpage">
 
@@ -16,7 +20,7 @@ const Root = () => {
             <div className="bg-overlay"></div>
 
             <div className="navbar">
-                <div className="menu">
+                <div className="menu" onClick={handleMenu}>
                     <div></div>
                     <div></div>
                     <div></div>
