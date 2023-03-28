@@ -1,17 +1,18 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Root from './components/Root';
-import Contact from './components/Contact';
-import About from './components/About';
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
+import LandingPage from './Routes/LandingPage';
 
 
-function App ()  {
+
+function App() {
   return (
- <div >
-     <Root />
-  
- </div>
- );
+    <Router>
+
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 
