@@ -8,7 +8,7 @@ function LandingPage() {
         <Root />
         <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default LandingPage
