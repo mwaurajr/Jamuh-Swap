@@ -53,7 +53,7 @@ function Footer() {
           <p>
 BookSwap is a free online platform that allows you to exchange books with other users. Our goal is to create a community of book lovers who can share their favorite books with one another and discover new books to read.
 <br/>
-How it works: <br/>
+{/* How it works: <br/>
 
 1. List a book: If you have a book that you would like to swap, simply list it on BookSwap. You can browse our database to see if anyone is interested in your book, or you can wait for someone to request it.
 <br/>
@@ -64,16 +64,16 @@ How it works: <br/>
 4. Receive the books: Once the books have been shipped, it's just a matter of waiting for them to arrive. Once you receive your new book, you can start reading and enjoying it!
 <br/>
 BookSwap is a great way to meet new people and discover new books. We hope that you enjoy using our platform and that it helps you build your own personal library of books that you love. If you have any questions or feedback, please don't hesitate to contact us.
-<br/>
+<br/> */}
 Happy swapping!
           </p>
         </div>
 
         <div className="social">
-  <a href="https://www.facebook.com/"><FaFacebook size={30} style={{ color: "#ffffff", marginRight: "1rem" }} /></a>
-  <a href="https://www.linkedin.com/"><FaLinkedin size={30} style={{ color: "#ffffff", marginRight: "1rem" }} /></a>
-  <a href="https://twitter.com/"><FaTwitter size={30} style={{ color: "#ffffff", marginRight: "1rem" }} /></a>
-  <a href="https://twitter.com/"><FaGithub size={30} style={{ color: "#ffffff", marginRight: "1rem" }} /></a>
+  <a href="https://m.facebook.com/frankiline.mwaura"><FaFacebook size={30} style={{ color: "#ffffff", marginRight: "1rem" }} /></a>
+  {/* <a href="https://www.linkedin.com/"><FaLinkedin size={30} style={{ color: "#ffffff", marginRight: "1rem" }} /></a> */}
+  <a href="https://twitter.com/_Jamhuri"><FaTwitter size={30} style={{ color: "#ffffff", marginRight: "1rem" }} /></a>
+  <a href="https://github.com/mwaurajr"><FaGithub size={30} style={{ color: "#ffffff", marginRight: "1rem" }} /></a>
 </div>
 
       </div>
