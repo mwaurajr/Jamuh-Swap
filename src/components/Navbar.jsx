@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <div className="header">
       <Link to="/">
-        <h1>GLX-TVL</h1>
+        <h1>PaperSwap</h1>
       </Link>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
@@ -20,7 +20,7 @@ function Navbar() {
         </li>
 
         <li>
-          <Link to="/pricing">Pricing</Link>
+          <Link to="/pricing">Dashboard</Link>
         </li>
 
         <li>
@@ -28,7 +28,7 @@ function Navbar() {
         </li>
 
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">Login</Link>
         </li>
       </ul>
 

@@ -9,9 +9,9 @@ const Root = () => {
     alert("Clicked Explore btn")
   }
 
-  const handleMenu = () =>{
-    alert("Clicked Menu SideBar")
-  }
+  // const handleMenu = () =>{
+  //   alert("Clicked Menu SideBar")
+  // }
 
   return (
         <div className="landingpage">
@@ -19,13 +19,13 @@ const Root = () => {
             <video src={bgvideo} autoPlay muted loop class="video-bg" />
             <div className="bg-overlay"></div>
 
-            <div className="navbar">
+            {/* <div className="navbar">
                 <div className="menu" onClick={handleMenu}>
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="home-text">
                 <h1>Welcome to BookSwap</h1>
