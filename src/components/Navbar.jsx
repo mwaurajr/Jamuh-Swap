@@ -24,11 +24,11 @@ function Navbar() {
         </li>
 
         <li>
-          <Link to="/training">Training</Link>
+          <Link to="/about">About</Link>
         </li>
 
         <li>
-          <Link to="/contact">Login</Link>
+          <Link to="/login">Login</Link>
         </li>
       </ul>
 

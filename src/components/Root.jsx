@@ -1,33 +1,26 @@
 import React from "react";
 import "./Root.css";
 import bgvideo from "../assets/books.mp4";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Root = () => {
 
 
-  const handleClick = () => {
-    alert("Clicked Explore btn")
-  }
-
-  // const handleMenu = () =>{
-  //   alert("Clicked Menu SideBar")
+  // const handleClick = () => {
+  //   alert("Clicked Explore btn")
   // }
+  function handleClick() {
+    const navigate = useNavigate();
+    navigate("/login");
+  }
 
   return (
         <div className="landingpage">
 
-            <video src={bgvideo} autoPlay muted loop class="video-bg" />
+            <video src={bgvideo} autoPlay muted loop className="video-bg" />
             <div className="bg-overlay"></div>
 
-            {/* <div className="navbar">
-                <div className="menu" onClick={handleMenu}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div> */}
-
-            <div className="home-text">
+               <div className="home-text">
                 <h1>Welcome to BookSwap</h1>
                 <p>The love of learning, the sequestered nooks, and all the sweet serenity of books.</p>
             </div>
