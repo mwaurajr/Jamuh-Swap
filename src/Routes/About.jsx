@@ -8,8 +8,7 @@ function About() {
   return (
     <div className="about">
       <Navbar />
-      <HeroImage heading='About P-Swap' text="
-      " />
+      <HeroImage  heading='PRICING.' text='Choose your Trip' />
       <Footer />
     </div>
   );
