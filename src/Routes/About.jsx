@@ -6,9 +6,9 @@ import Navbar from "../components/Navbar";
 
 function About() {
   return (
-    <div className="about">
+    <div >
       <Navbar />
-      <HeroImage  heading='PRICING.' text='Choose your Trip' />
+      <HeroImage  heading='PRICING.' text='Choose your Trip'/>
       <Footer />
     </div>
   );

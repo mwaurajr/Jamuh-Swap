@@ -26,11 +26,9 @@ function Navbar() {
         <li>
           <Link to="/about">About</Link>
         </li>
-
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-      </ul>
+        </ul>
+        <button className="home-btn"><Link to="/login">Login</Link></button>
+      
 
       <div className="hamburger" onClick={handleClick}>
         {click ? (
