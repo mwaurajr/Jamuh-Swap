@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,700&family=Outfit:wght@100;200;400;500;600;700;800&display=swap');
 
 
 *{
@@ -14,7 +15,7 @@ h1, h4, p, a {
 
 body {
   margin: 0;
-  font-family: 'Outfit' 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Outfit' 'Josefin' 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -39,9 +40,9 @@ a{
 }
 
 .home-btn {
-  width: 6em;
-  height: 2em;
-  border: 2px solid white;
+  width: 3.3em;
+  height: 1.2em;
+  border: 1px solid white;
   border-radius: 0.25em;
   background-color: rgba(255, 255, 255, 0.457);
   z-index: 1;
@@ -54,5 +55,5 @@ a{
 }
 
 .home-btn:hover{
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, .4);
 }
