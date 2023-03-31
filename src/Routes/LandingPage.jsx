@@ -1,16 +1,16 @@
-import React from 'react'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar';
-import Root from '../components/Root'
+import React from "react";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Root from "../components/Root";
 
 function LandingPage() {
   return (
     <div>
-        <Root />
-        <Navbar />
-        <Footer />
+      <Navbar />
+      <Root />
+      <Footer />
     </div>
   );
-};
+}
 
-export default LandingPage
+export default LandingPage;
