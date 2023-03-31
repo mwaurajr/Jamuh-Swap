@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <div className="header">
       <Link to="/">
-        <h1>PaperSwap</h1>
+        <h2>P-Swap</h2>
       </Link>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
