@@ -20,14 +20,19 @@ function Navbar() {
         </li>
 
         <li>
-          <Link to="/pricing">Dashboard</Link>
+          <Link to="/dashboard">Dashboard</Link>
         </li>
 
         <li>
           <Link to="/about">About</Link>
         </li>
+
+        <li>
+          <Link to="/signup">Sign up</Link >
+      </li>
+
         </ul>
-        <button className="home-btn"><Link to="/login">Login</Link></button>
+       
       
 
       <div className="hamburger" onClick={handleClick}>

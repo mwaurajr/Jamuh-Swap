@@ -1,12 +1,21 @@
 import React, { useState } from "react";
+import './Signup.css';
 
 function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [address, setAddress] = useState("");
+  const [bio, setBio] = useState("");
+  const [age, setAge] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [addressError, setAddressError] = useState("");
+  const [bioError, setBioError] = useState("");
+  const [ageError, setAgeError] = useState("");
+  const [phoneNumberError, setPhoneNumberError] = useState("");
 
   function handleNameChange(event) {
     setName(event.target.value);
@@ -21,6 +30,26 @@ function Signup() {
   function handlePasswordChange(event) {
     setPassword(event.target.value);
     setPasswordError("");
+  }
+
+  function handleAddressChange(event) {
+    setAddress(event.target.value);
+    setAddressError("");
+  }
+
+  function handleBioChange(event) {
+    setBio(event.target.value);
+    setBioError("");
+  }
+
+  function handleAgeChange(event) {
+    setAge(event.target.value);
+    setAgeError("");
+  }
+
+  function handlePhoneNumberChange(event) {
+    setPhoneNumber(event.target.value);
+    setPhoneNumberError("");
   }
 
   function handleSubmit(event) {
@@ -43,6 +72,22 @@ function Signup() {
       setPasswordError("Password is required");
       formIsValid = false;
     }
+    if (!address.trim()) {
+      setAddressError("Address is required");
+      formIsValid = false;
+    }
+    if (!bio.trim()) {
+      setBioError("Bio is required");
+      formIsValid = false;
+    }
+    if (!age.trim()) {
+      setAgeError("Age is required");
+      formIsValid = false;
+    }
+    if (!phoneNumber.trim()) {
+      setPhoneNumberError("Phone number is required");
+      formIsValid = false;
+    }
 
     // submit form data if valid
     if (formIsValid) {
@@ -50,7 +95,11 @@ function Signup() {
         user: {
           name: name,
           email: email,
-          password: password
+          password: password,
+          address: address,
+          bio: bio,
+          age: age,
+          phoneNumber: phoneNumber
         }
       };
 
@@ -75,16 +124,43 @@ function Signup() {
           <input type="text" value={name} onChange={handleNameChange} />
           {nameError && <div className="error">{nameError}</div>}
           <label htmlFor="email">Email:</label>
-          <input type="email" value={email} onChange={handleEmailChange} />
-          {emailError && <div className="error">{emailError}</div>}
-          <label htmlFor="password">Password:</label>
-          <input type="password" value={password} onChange={handlePasswordChange} />
-          {passwordError && <div className="error">{passwordError}</div>}
-          <button type="submit">Sign Up</button>
-        </form>
-      </div>
-    </div>
-  );
-}
+      <input type="email" value={email} onChange={handleEmailChange} />
+      {emailError && <div className="error">{emailError}</div>}
 
-export default Signup;
+      <label htmlFor="password">Password:</label>
+      <input
+        type="password"
+        value={password}
+        onChange={handlePasswordChange}
+      />
+      {passwordError && <div className="error">{passwordError}</div>}
+
+      <label htmlFor="address">Address:</label>
+      <input type="text" value={address} onChange={handleAddressChange} />
+      {addressError && <div className="error">{addressError}</div>}
+
+      <label htmlFor="bio">Bio:</label>
+      <textarea value={bio} onChange={handleBioChange} />
+      {bioError && <div className="error">{bioError}</div>}
+
+      <label htmlFor="age">Age:</label>
+      <input type="number" value={age} onChange={handleAgeChange} />
+      {ageError && <div className="error">{ageError}</div>}
+
+      <label htmlFor="phoneNumber">Phone Number:</label>
+      <input
+        type="tel"
+        pattern="[0-9]{10}"
+        value={phoneNumber}
+        onChange={handlePhoneNumberChange}
+      />
+      {phoneNumberError && (
+        <div className="error">{phoneNumberError}</div>
+      )}
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+  )}
+  export default Signup;

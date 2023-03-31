@@ -11,7 +11,7 @@ const Root = () => {
   // }
   function handleClick() {
     const navigate = useNavigate();
-    navigate("/dashboard");
+    navigate("/signup");
   }
 
   return (

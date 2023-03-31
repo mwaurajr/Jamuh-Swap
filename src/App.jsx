@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import About from './Routes/About';
 import LandingPage from './Routes/LandingPage';
-import Login from './components/Signup'
+import Signup from './components/Signup';
 
 
 
@@ -19,7 +19,7 @@ function App() {
       </Routes>
 
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
 
       {/* 
