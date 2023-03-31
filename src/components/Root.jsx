@@ -1,7 +1,7 @@
 import React from "react";
 import "./Root.css";
 import bgvideo from "../assets/books.mp4";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 const Root = () => {
 
@@ -11,7 +11,7 @@ const Root = () => {
   // }
   function handleClick() {
     const navigate = useNavigate();
-    navigate("/login");
+    navigate("/dashboard");
   }
 
   return (
