@@ -21,7 +21,7 @@ const Root = () => {
             <div className="bg-overlay"></div>
 
                <div className="home-text">
-                <h1>Welcome to BookSwap</h1>
+                <h1>Welcome to P-Swap</h1>
                 <p>The love of learning, the sequestered nooks, and all the sweet serenity of books.</p>
             </div>
 
