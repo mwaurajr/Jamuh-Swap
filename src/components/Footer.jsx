@@ -51,7 +51,7 @@ function Footer() {
         <div className="right">
           <h4>About the company</h4>
           <p>
-BookSwap is a free online platform that allows you to exchange books with other users. Our goal is to create a community of book lovers who can share their favorite books with one another and discover new books to read.
+P-Swap is a free online platform that allows you to exchange books with other users. Our goal is to create a community of book lovers who can share their favorite books with one another and discover new books to read.
 <br/>
 {/* How it works: <br/>
 
