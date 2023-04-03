@@ -27,11 +27,17 @@ function Navbar() {
           <Link to="/about">About</Link>
         </li>
 
-        <li>
+        <button className="home-btn" > 
+          
+          <li>
           <Link to="/signup">Sign up</Link >
-      </li>
+        </li>
+      
+      </button>
 
         </ul>
+
+        
        
       
 

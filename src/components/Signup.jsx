@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
 import './Signup.css';
 
 function Signup() {
@@ -160,7 +162,14 @@ function Signup() {
 
       <button type="submit">Sign Up</button>
     </form>
+    {/* <div className="alt">
+							Already have an account?{" "}
+							<Link to="/login" className="link">
+								Log in
+							</Link>
+						</div> */}
   </div>
+  {/* <Footer /> */}
 </div>
   )}
   export default Signup;
