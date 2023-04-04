@@ -126,50 +126,51 @@ function Signup() {
           <input type="text" value={name} onChange={handleNameChange} />
           {nameError && <div className="error">{nameError}</div>}
           <label htmlFor="email">Email:</label>
-      <input type="email" value={email} onChange={handleEmailChange} />
-      {emailError && <div className="error">{emailError}</div>}
+          <input type="email" value={email} onChange={handleEmailChange} />
+          {emailError && <div className="error">{emailError}</div>}
 
-      <label htmlFor="password">Password:</label>
-      <input
-        type="password"
-        value={password}
-        onChange={handlePasswordChange}
-      />
-      {passwordError && <div className="error">{passwordError}</div>}
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+          />
+          {passwordError && <div className="error">{passwordError}</div>}
 
-      <label htmlFor="address">Address:</label>
-      <input type="text" value={address} onChange={handleAddressChange} />
-      {addressError && <div className="error">{addressError}</div>}
+          <label htmlFor="address">Address:</label>
+          <input type="text" value={address} onChange={handleAddressChange} />
+          {addressError && <div className="error">{addressError}</div>}
 
-      <label htmlFor="bio">Bio:</label>
-      <textarea value={bio} onChange={handleBioChange} />
-      {bioError && <div className="error">{bioError}</div>}
+          <label htmlFor="bio">Bio:</label>
+          <textarea value={bio} onChange={handleBioChange} />
+          {bioError && <div className="error">{bioError}</div>}
 
-      <label htmlFor="age">Age:</label>
-      <input type="number" value={age} onChange={handleAgeChange} />
-      {ageError && <div className="error">{ageError}</div>}
+          <label htmlFor="age">Age:</label>
+          <input type="number" value={age} onChange={handleAgeChange} />
+          {ageError && <div className="error">{ageError}</div>}
 
-      <label htmlFor="phoneNumber">Phone Number:</label>
-      <input
-        type="tel"
-        pattern="[0-9]{10}"
-        value={phoneNumber}
-        onChange={handlePhoneNumberChange}
-      />
-      {phoneNumberError && (
-        <div className="error">{phoneNumberError}</div>
-      )}
+          <label htmlFor="phoneNumber">Phone Number:</label>
+          <input
+            type="tel"
+            pattern="[0-9]{10}"
+            value={phoneNumber}
+            onChange={handlePhoneNumberChange}
+          />
+          {phoneNumberError && (
+            <div className="error">{phoneNumberError}</div>
+          )}
 
-      <button type="submit">Sign Up</button>
-    </form>
-    {/* <div className="alt">
+          <button type="submit">Sign Up</button>
+        </form>
+        {/* <div className="alt">
 							Already have an account?{" "}
 							<Link to="/login" className="link">
 								Log in
 							</Link>
 						</div> */}
-  </div>
-  {/* <Footer /> */}
-</div>
-  )}
-  export default Signup;
+      </div>
+      {/* <Footer /> */}
+    </div>
+  )
+}
+export default Signup;
