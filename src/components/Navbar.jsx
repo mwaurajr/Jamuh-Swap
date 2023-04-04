@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaDashcube, FaHome, FaHSquare, FaTimes } from "react-icons/fa";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -16,18 +16,18 @@ function Navbar() {
       </Link>
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/"><FaHome /> Home</Link>
         </li>
 
         <li>
-          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/dashboard"> <FaDashcube /> Dashboard</Link>
         </li>
 
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about"> <FaHome />  About</Link>
         </li>
 
-        <button className="home-btn" > 
+        <button className="home-btn"> 
           
           <li>
           <Link to="/signup">Sign up</Link >
