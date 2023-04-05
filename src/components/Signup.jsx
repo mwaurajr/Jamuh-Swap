@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
 import './Signup.css';
 
 function Signup() {
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -119,6 +121,8 @@ function Signup() {
   }
 
   return (
+   <>
+    <Navbar />
     <div className="signup">
       <div className="form">
         <form onSubmit={handleSubmit}>
@@ -171,6 +175,7 @@ function Signup() {
       </div>
       {/* <Footer /> */}
     </div>
+   </>
   )
 }
 export default Signup;

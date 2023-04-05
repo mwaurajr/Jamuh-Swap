@@ -4,10 +4,10 @@
     color: white;
 }
 
-@font-face {
+/* @font-face {
     font-family:'Merianda' ;
     src: url("../fonts/Merianda.ttf") format('woff2');
-}
+} */
 
 .landingpage {
     width: 100%;
