@@ -8,7 +8,7 @@ function About() {
   return (
     <div >
       <Navbar />
-      <HeroImage  heading='PRICING.' text='Choose your Trip'/>
+      <HeroImage  heading='P-SWAP.' text='CHOOSE YOUR EXCHANGE.'/>
       <Footer />
     </div>
   );
