@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import './Signup.css';
 
 function Signup() {
+
+const navigate = useNavigate
+
+function handleClick () {
+  navigate('./login')
+}
   
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -164,7 +170,7 @@ function Signup() {
             <div className="error">{phoneNumberError}</div>
           )}
 
-          <button type="submit">Sign Up</button>
+          <button type="submit" onClick={handleClick}>Sign Up</button>
         </form>
         {/* <div className="alt">
 							Already have an account?{" "}
