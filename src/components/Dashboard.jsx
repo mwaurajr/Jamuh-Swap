@@ -1,11 +1,9 @@
 import React from 'react';
-import {  Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { Message, Forum, Notifications } from '@material-ui/icons';
-// import Conversations from './Conversations';
-// import Messages from './Messages';
-// import NotificationsList from './NotificationsList';
+import PricingCard from './PricingCard';
 
 const drawerWidth = 240;
 
@@ -19,9 +17,13 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    background: '#333',
+    color: '#fff',
   },
   drawerPaper: {
     width: drawerWidth,
+    background: '#333',
+    color: '#fff',
   },
   drawerContainer: {
     overflow: 'auto',
@@ -37,41 +39,44 @@ function Dashboard() {
 
   return (
     <div className={classes.root}>
-      <>
-        <Drawer
-          className={classes.drawer}
-          variant="permanent"
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-        >
-          <div className={classes.drawerContainer}>
-            <List>
-              <Link to="/messages">
-                <ListItem button key="Messages">
-                  <ListItemIcon><Message /></ListItemIcon>
-                  <ListItemText primary="Messages" />
-                </ListItem>
-              </Link>
-              <Link to="/conversations">
-                <ListItem button key="Conversations">
-                  <ListItemIcon><Forum /></ListItemIcon>
-                  <ListItemText primary="Conversations" />
-                </ListItem>
-              </Link>
-              <Link to="/notifications">
-                <ListItem button key="Notifications">
-                  <ListItemIcon><Notifications /></ListItemIcon>
-                  <ListItemText primary="Notifications" />
-                </ListItem>
-              </Link>
-            </List>
+      <Drawer
+        className={classes.drawer}
+        variant="permanent"
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+      >
+        <div className={classes.drawerContainer}>
+          <List>
+            <Link to="/messages" className={classes.link}>
+              <ListItem button key="Messages" className={`${classes.navItem}`}>
+                <ListItemIcon><Message /></ListItemIcon>
+                <ListItemText primary="Messages" />
+              </ListItem>
+            </Link>
+            <Link to="/conversations" className={classes.link}>
+              <ListItem button key="Conversations" className={`${classes.navItem}`}>
+                <ListItemIcon><Forum /></ListItemIcon>
+                <ListItemText primary="Conversations" />
+              </ListItem>
+            </Link>
+            <Link to="/notifications" className={classes.link}>
+              <ListItem button key="Notifications" className={`${classes.navItem}`}>
+                <ListItemIcon><Notifications /></ListItemIcon>
+                <ListItemText primary="Notifications" />
+              </ListItem>
+            </Link>
+          </List>
+        </div>
+      </Drawer>
+      <main className={classes.content}>
+        <div className="dashboard-container">
+          <h2>Welcome to Your Dashboard</h2>
+          <div className="dashboard-content">
+           <PricingCard />
           </div>
-        </Drawer>
-        <main className={classes.content}>
-      
-        </main>
-      </>
+        </div>
+      </main>
     </div>
   );
 }

@@ -1,0 +1,74 @@
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+  }
+  
+  .dashboard-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-nav a {
+    color: aqua;
+    background-color: white;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .dashboard-nav a:hover {
+    background-color: #555;
+  }
+  
+  .dashboard-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    /* background-color: pink; */
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  /* 
+  
+   <Drawer
+          className={classes.drawer}
+          variant="permanent"
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+        >
+          <div className={classes.drawerContainer}>
+            <List>
+              <Link to="/messages">
+                <ListItem button key="Messages">
+                  <ListItemIcon><Message /></ListItemIcon>
+                  <ListItemText primary="Messages" />
+                </ListItem>
+              </Link>
+              <Link to="/conversations">
+                <ListItem button key="Conversations">
+                  <ListItemIcon><Forum /></ListItemIcon>
+                  <ListItemText primary="Conversations" />
+                </ListItem>
+              </Link>
+              <Link to="/notifications">
+                <ListItem button key="Notifications">
+                  <ListItemIcon><Notifications /></ListItemIcon>
+                  <ListItemText primary="Notifications" />
+                </ListItem>
+              </Link>
+            </List>
+          </div>
+        </Drawer>
+        <main className={classes.content}>
+      
+        </main>*/

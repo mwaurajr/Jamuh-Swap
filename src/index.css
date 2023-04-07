@@ -44,7 +44,7 @@ a{
   height: 1.2em;
   border: 1px solid white;
   border-radius: 0.25em;
-  background-color: rgba(255, 255, 255, 0.457);
+  background-color: rgba(255, 255, 255, 0.457 );
   z-index: 1;
   font-size: 2em;
   cursor: pointer;

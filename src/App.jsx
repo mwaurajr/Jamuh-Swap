@@ -4,6 +4,9 @@ import About from "./Routes/About";
 import LandingPage from "./Routes/LandingPage";
 import Signup from "./components/Signup";
 import Dashboard from "./components/Dashboard";
+import Messages from "./components/Messages";
+import Conversations from "./components/Conversations";
+import Notifications from "./components/Notifications";
 
 function App() {
   return (
@@ -17,15 +20,12 @@ function App() {
 
         <Route path="/dashboard" element={<Dashboard />} />
 
-        {/* <Route path="/messages">
-          <Messages />
-        </Route>
-        <Route path="/conversations">
-          <Conversations />
-        </Route>
-        <Route path="/notifications">
-          <NotificationsList />
-        </Route> */}
+        <Route path="/messages" element={<Messages />}/>
+          
+        <Route path="/conversations" element={<Conversations />} />
+         
+        <Route path="/notifications" element={<Notifications />}/>
+         
       </Routes>
     </>
   );
