@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { Message, Forum, Notifications } from '@material-ui/icons';
-import Conversations from './Conversations';
-import Messages from './Messages';
-import NotificationsList from './NotificationsList';
+// import Conversations from './Conversations';
+// import Messages from './Messages';
+// import NotificationsList from './NotificationsList';
 
 const drawerWidth = 240;
 
@@ -37,7 +37,7 @@ function Dashboard() {
 
   return (
     <div className={classes.root}>
-      <Router>
+      <>
         <Drawer
           className={classes.drawer}
           variant="permanent"
@@ -69,19 +69,9 @@ function Dashboard() {
           </div>
         </Drawer>
         <main className={classes.content}>
-          <Switch>
-            <Route path="/messages">
-              <Messages />
-            </Route>
-            <Route path="/conversations">
-              <Conversations />
-            </Route>
-            <Route path="/notifications">
-              <NotificationsList />
-            </Route>
-          </Switch>
+      
         </main>
-      </Router>
+      </>
     </div>
   );
 }

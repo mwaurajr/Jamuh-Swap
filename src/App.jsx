@@ -16,6 +16,16 @@ function App() {
         <Route path="/signup" element={<Signup />} />
 
         <Route path="/dashboard" element={<Dashboard />} />
+
+        {/* <Route path="/messages">
+          <Messages />
+        </Route>
+        <Route path="/conversations">
+          <Conversations />
+        </Route>
+        <Route path="/notifications">
+          <NotificationsList />
+        </Route> */}
       </Routes>
     </>
   );
