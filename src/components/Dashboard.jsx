@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { Message, Forum, Notifications } from '@material-ui/icons';
 import PricingCard from './PricingCard';
+import "./Dashboard.css"
 
 const drawerWidth = 240;
 
@@ -72,6 +73,11 @@ function Dashboard() {
       <main className={classes.content}>
         <div className="dashboard-container">
           <h2>Welcome to Your Dashboard</h2>
+          <div className="dashboard-nav">
+        <Link to="/conversations">Messages</Link>
+        <Link to="/books">Books</Link>
+        <Link to="/notifications">Notifications</Link>
+      </div>  
           <div className="dashboard-content">
            <PricingCard />
           </div>
