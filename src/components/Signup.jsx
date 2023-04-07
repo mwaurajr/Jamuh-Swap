@@ -172,12 +172,12 @@ function handleClick () {
 
           <button type="submit" onClick={handleClick}>Sign Up</button>
         </form>
-        {/* <div className="alt">
+        <div className="alt">
 							Already have an account?{" "}
 							<Link to="/login" className="link">
 								Log in
 							</Link>
-						</div> */}
+						</div>
       </div>
       {/* <Footer /> */}
     </div>
