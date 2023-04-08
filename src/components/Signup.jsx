@@ -8,7 +8,7 @@ function Signup() {
 
 const navigate = useNavigate
 
-function handleClick () {
+function handleSignup () {
   navigate('./login')
 }
   
@@ -170,7 +170,7 @@ function handleClick () {
             <div className="error">{phoneNumberError}</div>
           )}
 
-          <button type="submit" onClick={handleClick}>Sign Up</button>
+          <button type="submit" onClick={handleSignup}>Sign Up</button>
         </form>
         <div className="alt">
 							Already have an account?{" "}

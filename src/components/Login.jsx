@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 function Login() {
+
+
+  const navigate = useNavigate
+
+function handleLogin () {
+  navigate('./dashboard')
+}
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -33,7 +40,7 @@ function Login() {
         <label htmlFor="password">Password:</label>
         <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
 
-        <button type="submit">Login</button>
+        <button type="submit" onClick={handleLogin}>Login</button>
         <div className="alt">
 							Don't have an account?{" "}
 							<Link to="/signup" className="link">
