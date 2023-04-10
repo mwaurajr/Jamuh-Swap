@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { Message, Forum, Notifications } from '@material-ui/icons';
-import PricingCard from './PricingCard';
+import PricingCard from './BookCard';
 import "./Dashboard.css"
 
 const drawerWidth = 240;
