@@ -4,13 +4,10 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import './Signup.css';
 
-function Signup() {
+function Signup(setUser, setIsAuthenticated) {
 
 const navigate = useNavigate
 
-function handleSignup () {
-  navigate('./login')
-}
   
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -113,18 +110,28 @@ function handleSignup () {
         }
       };
 
-      fetch("http://127.0.0.1:3000/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
+      fetch('/users',{
+        method:'POST',
+        headers:{
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
-        body: JSON.stringify(data)
+        body:JSON.stringify(signupData)
       })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error));
+      .then(r => {
+        if(r.ok){
+          r.json()
+          .then(user => {
+            setUser(user)
+            setIsAuthenticated(true)
+            navigate('/dashboard')
+          })
+        } else{
+          r.json()
+          .then(json => setErrors(json.errors))
+        }
+      })
     }
-  }
 
   return (
    <>
