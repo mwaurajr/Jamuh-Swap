@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import './Signup.css';
+import "./Signup.css";
 
-function Signup(setUser, setIsAuthenticated) {
+function Signup() {
+  const navigate = useNavigate();
 
-const navigate = useNavigate
-
-  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -106,38 +104,34 @@ const navigate = useNavigate
           address: address,
           bio: bio,
           age: age,
-          phoneNumber: phoneNumber
-        }
+          phoneNumber: phoneNumber,
+        },
       };
 
-      fetch('/users',{
-        method:'POST',
-        headers:{
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
+      fetch("/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body:JSON.stringify(signupData)
+        body: JSON.stringify(data),
       })
-      .then(r => {
-        if(r.ok){
-          r.json()
-          .then(user => {
-            setUser(user)
-            setIsAuthenticated(true)
-            navigate('/dashboard')
-          })
-        } else{
-          r.json()
-          .then(json => setErrors(json.errors))
-        }
-      })
+        .then((r) => {
+          if (r.ok) {
+            r.json().then(() => navigate("/dashboard"));
+          }
+        })
+        .catch((error) => console.error(error));
     }
+  }
 
   return (
-   <>
-    <Navbar />
-    <div className="signup">
-      <div className="form">
+    <>
+      <Navbar />
+      <div className="signup">
+        <div className="form">
+         
+
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
           <input type="text" value={name} onChange={handleNameChange} />
@@ -177,7 +171,7 @@ const navigate = useNavigate
             <div className="error">{phoneNumberError}</div>
           )}
 
-          <button type="submit" onClick={handleSignup}>Sign Up</button>
+          <button type="submit" >Sign Up</button>
         </form>
         <div className="alt">
 							Already have an account?{" "}
@@ -191,4 +185,5 @@ const navigate = useNavigate
    </>
   )
 }
+
 export default Signup;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Dashboard from './Dashboard';
 
 function Notifications() {
   const [notifications, setNotifications] = useState([]);
@@ -34,6 +35,7 @@ function Notifications() {
 
   return (
     <div>
+      
       <h1>Notifications</h1>
       {notifications.map(notification => (
         <div key={notification.id}>
