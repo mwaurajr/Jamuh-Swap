@@ -7,9 +7,9 @@ import './Login.css';
 function Login() {
 
 
-  const navigate = useNavigate
+  const navigate = useNavigate();
 
-function handleLogin () {
+function handleSubmit () {
   navigate('./dashboard')
 }
   const [email, setEmail] = useState('');
@@ -40,7 +40,7 @@ function handleLogin () {
         <label htmlFor="password">Password:</label>
         <input type="password" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
 
-        <button type="submit" onClick={handleLogin}>Login</button>
+        <button type="submit" onClick={handleSubmit}>Login</button>
         <div className="alt">
 							Don't have an account?{" "}
 							<Link to="/signup" className="link">

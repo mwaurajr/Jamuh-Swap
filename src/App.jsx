@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import About from "./Routes/About";
 import LandingPage from "./Routes/LandingPage";
 import Signup from "./components/Signup";
+// import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import Messages from "./components/Messages";
 import Conversations from "./components/Conversations";
@@ -18,7 +19,7 @@ function App() {
 
         <Route path="/signup" element={<Signup />} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/login/dashboard" element={<Dashboard />} />
 
         <Route path="/messages" element={<Messages />}/>
           
