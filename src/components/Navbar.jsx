@@ -30,7 +30,7 @@ function Navbar() {
         <button className="home-btn"> 
           
           <li>
-          <Link to="/signup">Sign up</Link >
+          <Link to="/login">Login</Link >
         </li>
       
       </button>
