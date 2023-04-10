@@ -1,66 +1,34 @@
-.pricing{
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 16px;
+  }
+  
+  .book-card img {
     width: 100%;
-    padding: 6rem 1rem;
-    background-color: #000;
-}
-
-.card-container{
-    max-width: 1140px;
-    margin: auto;
-    display: grid;
-    grid-gap: 40px;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.card-container .card{
-    border: 1px solid #eee;
-    color: #eee;
-}
-
-.card{
-    text-align: center;
-    padding: 1rem;
-}
-
-.card:hover{
-    background-color: #141414;
-}
-
-.card h3{
-    font-size: 2rem;
-    padding: 1rem;
-
-}
-
-.card .bar {
-    width: 10%;
-    border-bottom: 1px solid #eee;
-    margin: 1.5rem auto;
-    display: block ;
-} 
-
- .card .btc {
-    font-size: 3rem;
-    font-weight: 200;
-    padding: 1rem;
-}
-
-.pricing p {
-    color: #eee;
-    padding: 1rem 0;
-    font-size: 1.2rem; 
-} 
-
- .card .home-btn {
-    display: block;
-    width: 80%;
-    margin: 2rem auto;
-}
-
-@media screen and (max-width:900px) {
-    .card-container{
-        max-width: 90%;
-        margin: auto;
-        grid-template-columns:  1fr;
-    }
-}
+    height: auto;
+    margin-bottom: 16px;
+  }
+  
+  .book-card h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .book-card h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .book-card p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
