@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from "react";
 import { Routes, Route } from "react-router-dom";
-import About from "./Routes/About";
 import LandingPage from "./Routes/LandingPage";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
@@ -56,8 +55,6 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-
-        <Route path="/about" element={<About />} />
 
         <Route path="/login" element={<Login />} />
 

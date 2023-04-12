@@ -23,10 +23,6 @@ function Navbar() {
           <Link to="/dashboard"> <FaDashcube /> Dashboard</Link>
         </li>
 
-        <li>
-          <Link to="/about"> <FaHome />  About</Link>
-        </li>
-
         <button className="home-btn"> 
           
           <li>
