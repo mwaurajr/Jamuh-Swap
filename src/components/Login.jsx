@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
-function Login() {
+function Login({setIsAuthorized}) {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
@@ -15,8 +15,7 @@ function Login() {
     axios
       .post('http://localhost:3000/login', { email: email, password: password })
       .then((response) => {
-        // Handle successful login
-        console.log(response.data);
+     
         navigate('/dashboard'); // Navigate to the dashboard page
       })
       .catch((error) => {
@@ -28,7 +27,7 @@ function Login() {
   return (
     <>
       <div className="login-container">
-        <h2>Login</h2>
+        <h2>Login To P-Swap</h2>
         <form onSubmit={handleLogin}>
           <label htmlFor="email">Email:</label>
           <input
@@ -37,7 +36,7 @@ function Login() {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
+            
           />
 
           <label htmlFor="password">Password:</label>
@@ -47,7 +46,7 @@ function Login() {
             name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
+            
           />
 
           <button type="submit">Login</button>
